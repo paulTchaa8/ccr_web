@@ -1,0 +1,20 @@
+Numéro de version: V0.01.01
+Auteur: S69 Frank TCHA'A
+Date: 12/12/2023
+Contenu de la livraison:
+1. Intialisation projet backend ccr_web Frontend
+	- 
+
+Fichiers modifiés:
+	.gitignore
+	package-lock.json
+	package.json
+	public/
+	src/
+
+Fonctions modifées:
+	-
+
+Action manuelle:
+1. npm start
+----------------------------------------------------------------------------------

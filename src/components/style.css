@@ -1,0 +1,110 @@
+body{
+    background: #bdc3c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.form{
+    background-color: white;
+    border-radius: 5px;
+    width: 40%;
+    margin: 10vh auto;
+    padding: 20px;
+    /* height: 600px; */
+}
+
+.form-body{
+    text-align: left;
+    padding: 20px 10px;
+}
+
+.form-body > *{
+    padding: 5px;
+}
+
+.form__label{
+    width: 40%;
+}
+
+.form_input{
+    width: 60%;
+}
+
+.footer{
+    text-align: center;
+}
+
+.liens_register {
+    font-size: .8rem;
+    margin: 5% 0% 2% 2%;
+    display: flex;
+    flex-direction: row;
+}
+
+#generateur {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    margin: 20px 0px;
+    font-weight: bold;
+}
+
+.ligne_message:hover {
+    cursor: pointer;
+}
+
+.save_message:hover {
+    background: #222;
+}
+
+.cadre_message {
+    height: 24.5em;
+    font-size:  88%;
+    overflow-y: auto;
+    /*border: 1px solid #333;*/
+}
+
+#cadre_table {
+    width: 100.1%;
+}
+
+.star {
+    color: #c33;
+    font-size: 15px;
+}
+
+.item-enregistrement {
+    display: inline-block;
+    width: 13em;
+    max-height: 10em;
+    vertical-align: top;
+    margin: auto 1.55%;
+}
+
+.item-enregistrement>input:required,
+.item-enregistrement>textarea:required {
+    border-left: 2px solid #c33;
+}
+
+.invalid {
+    font-size: 10px;
+    color: #c33;
+    margin-left: 10px;
+    text-shadow: 0 0 6px #c33;
+}
+
+input:focus:invalid:focus, textarea:focus:invalid:focus {
+    border-color: #c33;
+    box-shadow: 0 0 4px #c33;
+}
+
+input~ .invalid, textarea~ .invalid {
+    visibility: hidden;
+}
+
+input:focus:invalid~ .invalid, textarea:focus:invalid~ .invalid {
+    visibility: visible;
+}
+
+label, textarea {display: block;}
