@@ -1,3 +1,24 @@
+Numéro de version: V0.01.02
+Auteur: S69 Frank TCHA'A
+Date: 12/02/2024
+Contenu de la livraison:
+1. Initiales nom prenom du user sur l'entete
+	- 
+
+Fichiers modifiés:
+	modified:   src/api/ccrApi.js
+	modified:   src/components/Dashboard/Dashboard.js
+	modified:   src/components/Dashboard/NavCustom.js
+	modified:   src/components/Dashboard/Sidebar.js
+	modified:   src/components/ManageConnexion.js
+
+
+Fonctions modifées:
+	-
+
+Action manuelle:
+1. npm start
+----------------------------------------------------------------------------------
 Numéro de version: V0.01.01
 Auteur: S69 Frank TCHA'A
 Date: 12/12/2023
