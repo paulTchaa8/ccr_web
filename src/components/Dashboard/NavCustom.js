@@ -1,6 +1,8 @@
 import { useState } from "react"
+import * as ccrApi from './../../api/ccrApi'
 
 const NavCustom = (props) => {
+	
 	const [isOpen, setIsOpen] = useState(false)
 	const [isOpenPhoto, setIsOpenPhoto] = useState(false)
 	const toggleOpen = () => {
@@ -75,7 +77,7 @@ const NavCustom = (props) => {
 		         
 		        <div style={{
 		        	borderRadius: '50%',
-		        	backgroundColor: '#11f',
+		        	backgroundColor: `#${ccrApi.randomColor}`,
 		        	color: '#fff',
 		        	height: '30px',
 		        	width: '30px',

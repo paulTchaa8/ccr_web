@@ -3,6 +3,8 @@ const baseUrl = 'http://127.0.0.1:8000/api'
 const token = localStorage.getItem('token')
 
 export const postsPerPage = 10
+export const randomColor = Math.floor(
+  Math.random()*16777215).toString(16)
 
 export function saveUser(user) {
   const body = new FormData()
