@@ -1,10 +1,9 @@
 import { useState } from 'react'
 import ConnexionForm from './ConnexionForm'
-import Dashboard from './Dashboard/Dashboard'
 import Header from './Header'
 import * as ccrApi from '../api/ccrApi'
 import './style.css'
-import { useLocation, Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 import { toast } from "react-toastify"
 
 const ManageConnexion = (props) => {
@@ -43,8 +42,10 @@ const ManageConnexion = (props) => {
 		ccrApi.login(user).then((response) => {
 			console.log('Connexion reussie ', response)
 			localStorage.setItem("token", response.token)
-			props.history.push("/dashboard")
+			localStorage.setItem("prenom", response.prenom)
+			localStorage.setItem("nom", response.nom)
 			toast.success(`Content de vous revoir, ${response.prenom} ${response.nom} !`)
+			props.history.push("/dashboard")
 		}).catch(err => {
 			console.log("Connexion echouee..")
 			props.history.push("/login")

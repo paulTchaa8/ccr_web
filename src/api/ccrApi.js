@@ -68,11 +68,20 @@ export function reset_password(user, reset_token) {
 }
 
 export function get_messages() {
+  const token = localStorage.getItem('token')
   return fetch(`${baseUrl}/messages`, {
     headers: {'Authorization': `token ${token}`}
   })
   .then(handleResponse)
   .catch(handleError)
+}
+
+export function logout() {
+  return fetch(`${baseUrl}/logout`, {
+    headers: {'Authorization': `token ${token}`}
+  })
+    .then(handleResponse)
+    .catch(handleError)
 }
 
 export function detail_message(m_id) {

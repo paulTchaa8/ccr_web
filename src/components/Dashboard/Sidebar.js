@@ -49,7 +49,7 @@ const Sidebar = (props) => {
 
 		        <CDBSidebarFooter style={{ textAlign: 'center', marginTop: '10vh' }}>
 					<div className="sidebar-btn-wrapper" style={{ padding: '20px 5px' }}>
-						Copyright &copy;2023 CCR
+						&copy;2024 CCR Inc.
 					</div>
 		        </CDBSidebarFooter>
 			</CDBSidebar>

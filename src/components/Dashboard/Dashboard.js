@@ -8,6 +8,7 @@ import WithAuth from '../common/WithAuth'
 import * as ccrApi from '../../api/ccrApi'
 import { useState, useEffect, useLayoutEffect } from 'react'
 import { toast } from "react-toastify"
+import  {useHistory} from 'react-router-dom'
 
 const Dashboard = () => {
 	const [data, setData] = useState({})
@@ -21,6 +22,7 @@ const Dashboard = () => {
 	const [currentPage, setCurrentPage] = useState(0)
 	const postsPerPage = ccrApi.postsPerPage
 	const numerosDePage = []
+	let history = useHistory()
 
 	useEffect(() => {
 		ccrApi.get_messages().then(response => {
@@ -124,7 +126,23 @@ const Dashboard = () => {
 			toast.success(`Message enregistree !`)
 		}).catch(err => {
 			console.log("Erreur lors de l'enregistrement.." + err.message)
-			toast.error(`Erreur lors de l'enregistrement..`)
+			toast.error(`Erreur lors de l'enregistrement.. ${err.message}`)
+		})
+	}
+
+	const handleLogout = (e) => {
+		// fonction de deconnexion de l'utilisateur..
+		e.preventDefault()
+		console.log('BADDOOO')
+		ccrApi.logout().then((response) => {
+			console.log('Deconnexion OK !', response)
+			// vide le localStorage et redirection vers la login page
+			history.push('/login')
+			localStorage.clear()
+			
+		}).catch(err => {
+			console.log('Erreur de deconnexion..'+ err.message)
+			toast.error('Erreur de deconnexion..' + err.message)
 		})
 	}
 
@@ -132,7 +150,10 @@ const Dashboard = () => {
     <div className="d-flex">
 	    <Sidebar setEnvoye={setEnvoye}/>
       	<div style={{flex:"1 1 auto", display:"flex", flexFlow:"column", height:"100vh", overflowX:"hidden"}}>
-        	<NavCustom handleSearchBar={handleSearchBar} />
+        	<NavCustom 
+        		handleSearchBar={handleSearchBar} 
+        		handleLogout={handleLogout}
+        	/>
         	<div style={{height:"150vh"}}>
         		{
         			spin ? 
@@ -156,7 +177,6 @@ const Dashboard = () => {
 	        		/> 
 	        		<Tableau 
 	        			messagesPages={messagesPages}
-	        			handleSearchBar={handleSearchBar}
 	        			setEnvoye={setEnvoye}
 	        			setSent={setSent}
 	        			currentPage={currentPage}

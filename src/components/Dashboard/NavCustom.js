@@ -72,13 +72,20 @@ const NavCustom = (props) => {
 		          data-mdb-toggle="dropdown"
 		          aria-expanded="false"
 		        >
-		          <img
-		            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-		            className="rounded-circle"
-		            height="25"
-		            alt="Black and White Portrait of a Man"
-		            loading="lazy"
-		          />
+		         
+		        <div style={{
+		        	borderRadius: '50%',
+		        	backgroundColor: '#11f',
+		        	color: '#fff',
+		        	height: '30px',
+		        	width: '30px',
+		        	padding: '3px',
+		        	fontWeight: 'bold'
+		        }}>
+		        	{localStorage.getItem('prenom').charAt(0).toUpperCase()}
+		        	{localStorage.getItem('nom').charAt(0).toUpperCase()}
+		        </div>
+		        
 		        </a>
 		        <ul
 		          className={menuClassPhoto}
@@ -88,7 +95,7 @@ const NavCustom = (props) => {
 		            <a className="dropdown-item" href="/profile/me">Mon profil</a>
 		          </li>
 		          <li>
-		            <a className="dropdown-item" href="/">D&eacute;connexion</a>
+		            <a className="dropdown-item" href="#" onClick={props.handleLogout}>D&eacute;connexion</a>
 		          </li>
 		        </ul>
 		      </div>
