@@ -181,3 +181,12 @@ export function get_messages_solr(keyword) {
   .then(handleResponse)
   .catch(handleError) 
 }
+
+export function get_message_metrics() {
+  return fetch(`${baseUrl}/messages/metrics`, {
+    method: "GET",
+    headers: {'Authorization': `token ${token}`}
+  })
+  .then(handleResponse)
+  .catch(handleError)
+}

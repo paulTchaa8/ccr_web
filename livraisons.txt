@@ -1,3 +1,27 @@
+Numéro de version: V0.01.03
+Auteur: S69 Frank TCHA'A
+Date: 15/04/2024
+Contenu de la livraison:
+1. Ajout metriques de messages
+	- Nombre de messages par mois sur 6 mois
+	- Page not found 404
+
+Fichiers modifiés:
+	package.json
+	src/App.js
+	src/api/ccrApi.js
+	src/components/Dashboard/Sidebar.js
+
+Fichiers ajoutés:
+	src/components/404Page/
+    src/components/Metrics/
+
+Fonctions modifées:
+	-
+
+Action manuelle:
+1. npm start
+----------------------------------------------------------------------------------
 Numéro de version: V0.01.02
 Auteur: S69 Frank TCHA'A
 Date: 12/02/2024

@@ -7,6 +7,8 @@ import Dashboard from './components/Dashboard/Dashboard'
 import ManageMessage from './components/Dashboard/ManageMessage'
 import ManageProfile from './components/Profil/ManageProfile'
 import SolrSearch from './components/Solr/SolrSearch'
+import Metrics from './components/Metrics/Metrics'
+import PageNotFound from './components/404Page/404Page'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.min.js"
 import { ToastContainer } from 'react-toastify'
@@ -27,6 +29,8 @@ function App() {
           <Route path="/messages" component={ManageMessage} />
           <Route path="/profile/me" component={ManageProfile} />
           <Route path="/solr/search" component={SolrSearch} />
+          <Route path="/metrics" component={Metrics} />
+          <Route path="*" component={PageNotFound} />
         </Switch>
       </BrowserRouter>
     </div>

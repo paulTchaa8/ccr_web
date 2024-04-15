@@ -32,10 +32,9 @@ const Sidebar = (props) => {
 			              	</CDBSidebarMenuItem>
 			            </NavLink>
 
-			            <NavLink exact to="/analytics" activeClassName="activeClicked"
-			            onClick={() => props.setEnvoye(true)}>
-			              	<CDBSidebarMenuItem icon="file-export">
-			              		Exporter
+			            <NavLink exact to="/metrics" activeClassName="activeClicked">
+			              	<CDBSidebarMenuItem icon="chart-bar">
+			              		M&eacute;triques
 			              	</CDBSidebarMenuItem>
 			            </NavLink>
 
