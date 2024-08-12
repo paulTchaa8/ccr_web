@@ -71,7 +71,13 @@ const Metrics = () => {
 	    <Sidebar />
       	<div style={{flex:"1 1 auto", display:"flex", flexFlow: "column", height:"100vh", overflowX:"hidden"}}>
         	<NavCustom />
-        	<div style={{display: 'flex', backgroundColor: "#fff", justifyContent: 'center'}}>
+        	<div style={{
+        		display: 'flex', 
+        		width: '100wh', 
+        		height: '100vh', 
+        		backgroundColor: "#fff", 
+        		justifyContent: 'center'
+        	}}>
         		<div style={{ width: '80%', padding: '4.5% 0'}}>
         			<Line options={options} data={data} />
         		</div>

@@ -17,7 +17,9 @@ const PageNotFound = () => {
         		alignItems: 'center'
         	}}>
         		<p style={{ fontSize: '20vh', color: 'rgb(53, 162, 235)'}}>
-        			404
+        			404 | <span style={{fontSize: '5vh'}}>
+        			Oops! Couldn't find what you're looking for.
+        			</span>
         		</p>
         	</div>
       	</div>

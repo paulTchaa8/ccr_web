@@ -149,12 +149,18 @@ const Dashboard = () => {
 	return (
     <div className="d-flex">
 	    <Sidebar setEnvoye={setEnvoye}/>
-      	<div style={{flex:"1 1 auto", display:"flex", flexFlow:"column", height:"100vh", overflowX:"hidden"}}>
+      	<div style={{ 
+      			flex: "1 1 auto", 
+      			display:"flex", 
+      			flexFlow:"column",
+      			height: "100vh",  
+      			overflow:"hidden"
+      		}}>
         	<NavCustom 
         		handleSearchBar={handleSearchBar} 
         		handleLogout={handleLogout}
         	/>
-        	<div style={{height:"150vh"}}>
+        	<div style={{ height:"80vh" }}>
         		{
         			spin ? 
         			(

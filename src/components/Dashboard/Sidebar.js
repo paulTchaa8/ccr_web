@@ -10,7 +10,7 @@ import { NavLink } from 'react-router-dom'
 
 const Sidebar = (props) => {
 	return (
-		<div style={{ display: 'flex', height: '100vh', overflow: 'scroll initial' }}>
+		<div style={{ display: 'flex', overflow: 'scroll initial' }}>
 	      	<CDBSidebar textColor="#fff" backgroundColor="#333">
 		        <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
 					<a href="/" className="text-decoration-none" style={{ color: 'inherit' }}>
@@ -48,7 +48,7 @@ const Sidebar = (props) => {
 
 		        <CDBSidebarFooter style={{ textAlign: 'center', marginTop: '10vh' }}>
 					<div className="sidebar-btn-wrapper" style={{ padding: '20px 5px' }}>
-						&copy;2024 CCR Inc.
+						Copyright &copy;2024 CCR Inc.
 					</div>
 		        </CDBSidebarFooter>
 			</CDBSidebar>

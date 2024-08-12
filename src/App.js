@@ -17,7 +17,7 @@ import 'react-toastify/dist/ReactToastify.css'
 function App() {
   return (
     <div>
-      <ToastContainer position="top-center" autoclose={1500} hideProgressBar={false} />
+      <ToastContainer position="top-center" autoclose={1000} hideProgressBar={false} />
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Dashboard} />
